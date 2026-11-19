@@ -54,8 +54,8 @@ p{margin:0 0 1em}
 .lang{font-size:13px!important;letter-spacing:.08em;border:1px solid rgba(234,238,242,.35)!important;padding:6px 10px!important}
 .burger{display:none;width:48px;height:48px;background:none;border:1px solid rgba(234,238,242,.35);color:var(--ink);cursor:pointer;align-items:center;justify-content:center}
 .burger{position:relative;z-index:2}
-.burger span{position:absolute;left:13px;width:20px;height:1.5px;background:currentColor;transition:transform .35s var(--ease),opacity .2s}
-.burger span:nth-child(1){top:17px}.burger span:nth-child(2){top:23px}.burger span:nth-child(3){top:29px}
+.burger span{position:absolute;left:13px;width:20px;height:2px;background:currentColor;transition:transform .35s var(--ease),opacity .2s}
+.burger span:nth-child(1){top:15px}.burger span:nth-child(2){top:21px}.burger span:nth-child(3){top:27px}
 .nav.menu-open .burger span:nth-child(1){transform:translateY(6px) rotate(45deg)}
 .nav.menu-open .burger span:nth-child(2){opacity:0}
 .nav.menu-open .burger span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
@@ -258,7 +258,7 @@ body.menu-auf .demobar{opacity:0;visibility:hidden}
 .mmenu__foot svg{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linejoin:round}
 .flagge{width:20px;height:12px;flex:none;display:block;border:1px solid rgba(234,238,242,.25)}
 .lang{display:inline-flex!important;align-items:center;gap:8px}
-.lang--mobil{display:none!important;min-height:48px;margin-left:auto;margin-right:10px;font-size:13px;letter-spacing:.08em;text-decoration:none;border:1px solid rgba(234,238,242,.35);padding:0 12px;color:var(--ink)}
+.lang--mobil{display:none!important;min-height:48px;margin-left:auto;margin-right:-14px;font-size:13px;letter-spacing:.08em;text-decoration:none;border:1px solid rgba(234,238,242,.35);padding:0 12px;color:var(--ink)}
 @media (max-width:1023.98px){.lang--mobil{display:inline-flex!important}}
 
 /* Seiten mit Demo-Leiste: Fuss mit Abstand in Leistenhöhe, damit Impressum und Co. frei bleiben */
