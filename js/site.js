@@ -67,6 +67,7 @@
       li.forEach(function (l) { var an = +l.dataset.v <= j && +l.dataset.b >= j; l.hidden = !an; if (an) n++; });
       pk.forEach(function (p) { p.classList.toggle('an', +p.dataset.v <= j && +p.dataset.b >= j); });
       if (brust) { brust.setAttribute('x1', x(j)); brust.setAttribute('x2', x(j)); }
+      var griff = $('#vtGriff'); if (griff) griff.style.setProperty('--p', ((x(j) + 10) / 1020).toFixed(4));
       $('#vtLeer').hidden = n > 0;
     };
     regler.addEventListener('input', zeige);

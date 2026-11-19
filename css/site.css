@@ -212,7 +212,7 @@ p{margin:0 0 1em}
 .atlas{background:var(--surface);padding-block:clamp(64px,9vw,120px)}
 .atlas__kopf{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:28px}
 .atlas__jahr{font:200 clamp(64px,9vw,140px)/.85 'Newsreader',serif;letter-spacing:-.04em}
-.atlas__karte{position:relative;border:1px solid var(--line);background:var(--bg)}
+.atlas__karte{position:relative;container-type:inline-size;border:1px solid var(--line);background:linear-gradient(rgba(11,16,22,.88),rgba(11,16,22,.88)),url(../media/hero-panorama.webp) center/cover no-repeat,var(--bg)}
 .atlas__karte svg{display:block;width:100%;height:auto}
 .atlas__karte{padding:18px 18px 6px}
 .atlas__karte .achse{stroke:var(--stahl);stroke-width:1}
@@ -230,9 +230,17 @@ p{margin:0 0 1em}
 .lg-s{background:var(--stahl);opacity:.6}
 .sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .liste-ohne{list-style:none;margin:0;padding:0}
-.atlas__regler{margin:28px 0 8px}
-.atlas__regler input{width:100%;accent-color:var(--accent);height:32px}
-.atlas__skala{display:flex;justify-content:space-between;font-size:13px;color:var(--muted)}
+/* Desktop: unsichtbarer Schieber über der Grafik, genau so breit wie die Jahresachse; sichtbar ist der Griff auf der Linie */
+.atlas__regler{position:absolute;left:calc(18px + (100% - 36px) * 10 / 1020);width:calc((100% - 36px) * 1000 / 1020);top:18px;bottom:6px;margin:0}
+.atlas__regler input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:grab}
+.atlas__regler input:active{cursor:grabbing}
+.vt-griff{position:absolute;left:calc(18px + (100% - 36px) * var(--p));top:calc(18px + (100cqw - 36px) * 360 / 1020 - 14px);height:28px;transform:translateX(-50%);display:flex;align-items:center;gap:16px;pointer-events:none;transition:left .15s var(--ease)}
+.vt-griff b{display:block;width:22px;height:22px;background:var(--accent);border:3px solid var(--bg);box-shadow:0 0 0 1px var(--accent);transform:rotate(45deg)}
+.vt-griff span{display:block;font-size:0;width:11px;height:11px;border:solid var(--accent);border-width:0 0 2px 2px}
+.vt-griff span:first-child{transform:rotate(45deg)}
+.vt-griff span:last-child{transform:rotate(-135deg)}
+.atlas__karte:has(input:focus-visible) .vt-griff b{outline:2px solid var(--ink);outline-offset:3px}
+
 .atlas__info{display:grid;grid-template-columns:1fr 1fr;gap:4vw;margin-top:32px}
 .atlas__info h3{font-size:clamp(20px,1.6vw,24px);margin-bottom:8px}
 .atlas__liste{list-style:none;margin:0;padding:0}
@@ -303,7 +311,10 @@ body:has(#demobar) .foot{padding-bottom:96px}
   .karten{grid-template-columns:1fr}
   .hero__knoepfe{max-width:none}
   .atlas__info{grid-template-columns:1fr}
-  .atlas__karte,.atlas__legende{display:none}
+  .atlas__karte{background:none;border:0;padding:0}
+  .atlas__karte svg,.atlas__legende,.vt-griff{display:none}
+  .atlas__regler{position:static;width:auto;margin:16px 0 8px}
+  .atlas__regler input{position:static;opacity:1;height:32px;accent-color:var(--accent)}
   .atlas__kopf{margin-bottom:8px}
   .atlas__jahr{font-size:64px}
   .demobar{bottom:10px;padding:8px 42px 8px 12px;font-size:13px;line-height:1.4}
