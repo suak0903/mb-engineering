@@ -264,6 +264,7 @@ body.menu-auf .demobar{opacity:0;visibility:hidden}
 .mmenu__foot{margin-top:16px}
 .mmenu__foot a{display:flex;align-items:center;justify-content:center;gap:10px}
 .mmenu__foot svg{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linejoin:round}
+.mmenu__foot svg.voll{fill:currentColor;stroke:none;width:17px;height:17px}
 .flagge{width:20px;height:12px;flex:none;display:block;border:1px solid rgba(234,238,242,.25)}
 .lang{display:inline-flex!important;align-items:center;gap:8px}
 .lang--mobil{display:none!important;min-height:48px;margin-left:auto;margin-right:-14px;font-size:13px;letter-spacing:.08em;text-decoration:none;border:1px solid rgba(234,238,242,.35);padding:0 12px;color:var(--ink)}
