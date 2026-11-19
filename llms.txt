@@ -1,0 +1,24 @@
+# MBecker Engineering
+
+> Independent project, contract and claim management for large infrastructure projects, from Zurich, Switzerland. Owner: Michael Becker, M. Sc. C. Eng., Certified Senior Project Manager IAPM. This is a draft (preview) of a new website for mb-eng.ch; the official site is https://mb-eng.ch/.
+
+## Company
+- [Company and professional development since 1993](https://suak0903.github.io/mb-engineering/company.html)
+- Address: Michael-Maggi-Strasse 3, 8046 Zurich, Switzerland
+- Contact: contact@mb-eng.ch, +41 79 879 31 30
+
+## Services
+- [Project life cycle management, project development, construction management until acceptance](https://suak0903.github.io/mb-engineering/services.html)
+
+## References (selection)
+- [Gotthard Base Tunnel, Head of Contract Management client side, 2011-2013](https://suak0903.github.io/mb-engineering/project-gotthard.html)
+- [Pumped storage plant Linth-Limmern, claim and contract manager, 2013-2014](https://suak0903.github.io/mb-engineering/project-linth-limmern.html)
+- [Pumped storage plant Nant de Drance, claim and contract manager, 2013-2014](https://suak0903.github.io/mb-engineering/project-nant-de-drance.html)
+- [Metro Line 2 Ho Chi Minh City, senior project and contract manager, 2009-2011](https://suak0903.github.io/mb-engineering/project-metro-hcmc.html)
+- [All 18 references](https://suak0903.github.io/mb-engineering/references.html)
+
+## Knowledge
+- [Workshops on negotiation, FIDIC claim and contract management, project management of large-scale projects](https://suak0903.github.io/mb-engineering/knowledge.html)
+
+## German version
+- [Deutsche Fassung](https://suak0903.github.io/mb-engineering/de/index.html)
