@@ -43,6 +43,18 @@
     rev.forEach(function (el) { io.observe(el); });
   } else rev.forEach(function (el) { el.classList.add('in'); });
 
+  /* Kennzahlen zählen beim ersten Sichtbarwerden hoch (Endwert steht im HTML, ohne JS bleibt er stehen) */
+  var zahlen = $$('[data-zahl]');
+  if (zahlen.length && !reduce && 'IntersectionObserver' in window) {
+    var zaehle = function (el) {
+      var ziel = +el.dataset.zahl, von = +(el.dataset.von || 0), t0 = null;
+      var schritt = function (t) { if (!t0) t0 = t; var f = Math.min(1, (t - t0) / 1600), e = 1 - Math.pow(1 - f, 3); el.textContent = Math.round(von + (ziel - von) * e); if (f < 1) requestAnimationFrame(schritt); };
+      requestAnimationFrame(schritt);
+    };
+    var iz2 = new IntersectionObserver(function (en) { en.forEach(function (e) { if (e.isIntersecting) { zaehle(e.target); iz2.unobserve(e.target); } }); }, { threshold: 0.6 });
+    zahlen.forEach(function (el) { el.textContent = el.dataset.von || '0'; iz2.observe(el); });
+  }
+
   /* Kompetenzliste: die Zeile in der Mitte des Bildschirms (oder unter Maus und Fokus) wechselt das Bild */
   var zeilen = $$('.zeile'), bilder = $$('.split__bild img');
   function setze(i) { zeilen.forEach(function (z) { z.classList.toggle('an', z.dataset.i === String(i)); }); bilder.forEach(function (b) { b.classList.toggle('an', b.dataset.i === String(i)); }); }

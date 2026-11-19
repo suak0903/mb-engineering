@@ -136,7 +136,8 @@ p{margin:0 0 1em}
 .zahlen div:last-child{border-right:0}
 .zahlen b{display:block;font:200 clamp(48px,5.4vw,88px)/.9 'Newsreader',serif;letter-spacing:-.03em;margin-bottom:14px;color:var(--hell-ink)}
 .zahlen b small{font-size:.4em;margin-left:.12em;letter-spacing:0}
-.zahlen span{font-size:var(--step-small);color:var(--hell-muted)}
+.zahlen span{display:block;font-size:var(--step-small);line-height:1.5;color:var(--hell-muted)}
+.zahlen b i{font-style:normal;font-variant-numeric:tabular-nums}
 
 /* Swissness: Aussage links, Bild rechts, beide 6 Spalten */
 .swiss__text{grid-column:1/7;align-self:center;padding-right:4vw}
